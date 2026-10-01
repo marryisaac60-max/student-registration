@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Isaac | Web & Graphic Designer</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#06152f;
+    color:white;
+}
+
+/* NAVIGATION */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(3,12,35,0.96);
+    z-index:1000;
+}
+
+.logo{
+    color:#00e5ff;
+    font-size:25px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:#00e5ff;
+}
+
+/* HOME */
+#home{
+    min-height:100vh;
+    padding:140px 7% 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    background:linear-gradient(135deg,#06152f,#004b75,#071a3b);
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero-text h1{
+    font-size:52px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-text h1 span{
+    color:#00e5ff;
+}
+
+.hero-text p{
+    font-size:19px;
+    line-height:1.7;
+    color:#dcecff;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 27px;
+    margin:5px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.primary{
+    background:#00e5ff;
+    color:#001321;
+}
+
+.secondary{
+    border:2px solid #00e5ff;
+    color:white;
+}
+
+/* PHOTO */
+.photo{
+    width:330px;
+    height:330px;
+    border-radius:50%;
+    padding:8px;
+    border:6px solid #00e5ff;
+    box-shadow:0 0 40px #00e5ff;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+/* GENERAL SECTIONS */
+section{
+    padding:90px 7%;
+}
+
+.title{
+    text-align:center;
+    font-size:38px;
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#c9d8e8;
+    margin-bottom:45px;
+}
+
+/* SERVICES */
+#services{
+    background:#081d40;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#102b55;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:20px;
+    border:1px solid #1c4c7b;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #00e5ff;
+    border-color:#00e5ff;
+}
+
+.card h3{
+    color:#00e5ff;
+    font-size:23px;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#d6e5f2;
+    line-height:1.7;
+}
+
+/* ABOUT */
+#about{
+    background:#06152f;
+    text-align:center;
+}
+
+.about-text{
+    max-width:850px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    color:#d7e5f2;
+}
+
+/* CONTACT */
+#contact{
+    background:linear-gradient(135deg,#004b75,#06152f);
+    text-align:center;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.08);
+}
+
+.contact-box p{
+    font-size:18px;
+    margin:15px;
+}
+
+.contact-button{
+    display:inline-block;
+    margin-top:15px;
+    padding:15px 30px;
+    border-radius:30px;
+    background:#00e5ff;
+    color:#001321;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020b1d;
+    color:#b9c9d8;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    nav{
+        padding:15px 4%;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    nav ul li a{
+        font-size:12px;
+    }
+
+    #home{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding-top:130px;
+    }
+
+    .hero-text h1{
+        font-size:37px;
+    }
+
+    .photo{
+        width:260px;
+        height:260px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+
+    <div class="logo">
+        ISAAC
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- HOME -->
+<section id="home">
+
+    <div class="hero-text">
+
+        <h1>
+            HI? I AM <span>ISAAC.</span><br>
+            WELCOME TO MY WEBSITE.
+        </h1>
+
+        <p>
+            I am a passionate Web Designer and Graphic Designer.
+            I create beautiful websites, posters, logos,
+            crusade banners and professional business cards.
+        </p>
+
+        <a href="#services" class="btn primary">
+            MY SERVICES
+        </a>
+
+        <a href="#contact" class="btn secondary">
+            CONTACT ME
+        </a>
+
+    </div>
+
+
+    <!-- PUT YOUR PHOTO HERE -->
+
+    <div class="photo">
+        <img src="image.png/Screenshot 2026-05-29 195013.png">
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <h2 class="title">
+        MY SERVICES
+    </h2>
+
+    <p class="subtitle">
+        Creative digital solutions for individuals, businesses,
+        churches and organizations.
+    </p>
+
+
+    <div class="services">
+
+        <!-- WEB DESIGN -->
+        <div class="card">
+
+            <h3>Web Design</h3>
+
+            <p>
+                Modern, beautiful and responsive websites
+                for businesses, organizations and individuals.
+            </p>
+
+        </div>
+
+
+        <!-- GRAPHIC DESIGN -->
+        <div class="card">
+
+            <h3>Graphic Design</h3>
+
+            <p>
+                Professional and creative graphic designs
+                that make your brand stand out.
+            </p>
+
+        </div>
+
+
+        <!-- POSTERS -->
+        <div class="card">
+
+            <h3>Posters</h3>
+
+            <p>
+                Attractive posters for businesses,
+                events, churches and organizations.
+            </p>
+
+        </div>
+
+
+        <!-- LOGOS -->
+        <div class="card">
+
+            <h3>Logos</h3>
+
+            <p>
+                Unique and professional logos designed
+                for your business or organization.
+            </p>
+
+        </div>
+
+
+        <!-- CRUSADE BANNERS -->
+        <div class="card">
+
+            <h3>Crusade Banners</h3>
+
+            <p>
+                Beautiful crusade banners, church posters,
+                conference graphics and event designs.
+            </p>
+
+        </div>
+
+
+        <!-- BUSINESS CARDS -->
+        <div class="card">
+
+            <h3>Business Cards</h3>
+
+            <p>
+                Professional business cards to promote
+                your business and services.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="title">
+        ABOUT ME
+    </h2>
+
+    <p class="about-text">
+
+        Welcome to my website. I am Isaac, a creative Web
+        and Graphic Designer passionate about technology,
+        creativity and digital design.
+
+        <br><br>
+
+        I help individuals, businesses, churches and
+        organizations turn their ideas into beautiful
+        websites and professional designs.
+
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="title">
+        CONTACT ME
+    </h2>
+
+    <p class="subtitle">
+        Have a project in mind? Let's work together.
+    </p>
+
+
+    <div class="contact-box">
+
+        <p>
+            Phone: <strong>0117706718</strong>
+        </p>
+
+        <p>
+            Web Design
+        </p>
+
+        <p>
+            Graphic Design
+        </p>
+
+        <a href="tel:0117706718" class="contact-button">
+            CALL ISAAC
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 ISAAC | WEB & GRAPHIC DESIGNER
+    </p>
+
+    <p>
+        Designed by Isaac
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
